@@ -1,0 +1,33 @@
+Runtime Analysis 
+
+
+Results:
+Array Size              Insert              Append
+
+extraLargeArray         850.5885  ms        3.667 ms     
+largeArray              840.8579 ms         725.2 μs 
+mediumArray             191.5 μs            136.7 μs 
+smallArray              52 μs               82.7 μs 
+tinyArray               34.5 μs             76.5 μs 
+
+
+Based on the pattern shown here, it can be concluded that there is a 
+direct connection between the size of the array/arrays and the runtime 
+of the function/funtions. The type of can and does affect the runtime. 
+The results show that the insert functions runs quicker on small and tiny 
+arrays, where as it runs longer on medium, large, and extra large arrays. 
+The append function scales better and shows are more linear growing time
+as the size of the array increases.  
+
+
+Extra Credit: 
+
+
+The reason why the Insert function runs slower than the Append function is 
+because it has a .unshift. .Unshift adds the new elements to the beginning of 
+an array. This changes the index of all the prior elements, which then causes 
+the runtime to be slower. Whereas .push adds the new elements at the end of an
+array. It doesn't affect the index of the prior elements which allows it to run
+quicker. 
+
+
